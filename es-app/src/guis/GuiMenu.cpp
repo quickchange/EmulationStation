@@ -161,6 +161,11 @@ GuiMenu::GuiMenu(Window* window) : GuiComponent(window), mMenu(window, "MAIN MEN
 			});
 
 			ComponentListRow row;
+			// framerate
+			auto framerate = std::make_shared<SwitchComponent>(mWindow);
+			framerate->setState(Settings::getInstance()->getBool("DrawFramerate"));
+			s->addWithLabel("SHOW FRAMERATE", framerate);
+			s->addSaveFunc([framerate] { Settings::getInstance()->setBool("DrawFramerate", framerate->getState()); });
 
 			// show filtered menu
 			row.elements.clear();
@@ -168,12 +173,23 @@ GuiMenu::GuiMenu(Window* window) : GuiComponent(window), mMenu(window, "MAIN MEN
 			row.addElement(makeArrow(mWindow), false);
 			row.makeAcceptInputHandler(std::bind(&GuiMenu::openScreensaverOptions, this));
 			s->addRow(row);
+			// show help
+			auto show_help = std::make_shared<SwitchComponent>(mWindow);
+			show_help->setState(Settings::getInstance()->getBool("ShowHelpPrompts"));
+			s->addWithLabel("ON-SCREEN HELP", show_help);
+			s->addSaveFunc([show_help] { Settings::getInstance()->setBool("ShowHelpPrompts", show_help->getState()); });
 
 			// quick system select (left/right in game list view)
 			auto quick_sys_select = std::make_shared<SwitchComponent>(mWindow);
 			quick_sys_select->setState(Settings::getInstance()->getBool("QuickSystemSelect"));
 			s->addWithLabel("QUICK SYSTEM SELECT", quick_sys_select);
 			s->addSaveFunc([quick_sys_select] { Settings::getInstance()->setBool("QuickSystemSelect", quick_sys_select->getState()); });
+
+			// Enable OSK (On-Screen-Keyboard)
+			auto osk_enable = std::make_shared<SwitchComponent>(mWindow);
+			osk_enable->setState(Settings::getInstance()->getBool("UseOSK"));
+			s->addWithLabel("ON SCREEN KEYBOARD", osk_enable);
+			s->addSaveFunc([osk_enable] { Settings::getInstance()->setBool("UseOSK", osk_enable->getState()); } );
 
 			// carousel transition option
 			auto move_carousel = std::make_shared<SwitchComponent>(mWindow);

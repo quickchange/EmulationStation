@@ -45,6 +45,7 @@ void Settings::setDefaults()
 	mBoolMap["DrawFramerate"] = false;
 	mBoolMap["ShowExit"] = true;
 	mBoolMap["Windowed"] = false;
+	mBoolMap["UseOSK"] = true;
 	mBoolMap["SplashScreen"] = true;
 
 #ifdef _RPI_
