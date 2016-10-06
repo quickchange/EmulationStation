@@ -186,21 +186,6 @@ GuiMenu::GuiMenu(Window* window) : GuiComponent(window), mMenu(window, "MAIN MEN
 			s->addWithLabel("ON SCREEN KEYBOARD", osk_enable);
 			s->addSaveFunc([osk_enable] { Settings::getInstance()->setBool("UseOSK", osk_enable->getState()); } );
 
-			// carousel transition option
-			auto move_carousel = std::make_shared<SwitchComponent>(mWindow);
-			move_carousel->setState(Settings::getInstance()->getBool("MoveCarousel"));
-			s->addWithLabel("CAROUSEL TRANSITIONS", move_carousel);
-			s->addSaveFunc([move_carousel] {
-				if (move_carousel->getState()
-					&& !Settings::getInstance()->getBool("MoveCarousel")
-					&& PowerSaver::getMode() == PowerSaver::INSTANT)
-				{
-					Settings::getInstance()->setString("PowerSaverMode", "default");
-					PowerSaver::init();
-				}
-				Settings::getInstance()->setBool("MoveCarousel", move_carousel->getState());
-			});
-
 			// transition style
 			auto transition_style = std::make_shared< OptionListComponent<std::string> >(mWindow, "TRANSITION STYLE", false);
 			std::vector<std::string> transitions;
