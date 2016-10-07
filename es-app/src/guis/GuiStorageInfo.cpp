@@ -7,6 +7,7 @@
 #include "Settings.h"
 #include "guis/GuiMsgBox.h"
 #include "guis/GuiSettings.h"
+#include "guis/GuiEmulatorList.h"
 
 #include <iostream>
 #include <stdio.h>
@@ -112,6 +113,10 @@ GuiStorageInfo::GuiStorageInfo(Window* window) : GuiComponent(window), mMenu(win
 	row.addElement(tell_free, true);
 	row.addElement(tell_free_i, true);
 	mMenu.addRow(row);
+
+	addEntry("STORAGE PER SYSTEM", 0x777777FF, true, [this] {
+		mWindow->pushGui(new GuiEmulatorList(mWindow));
+	});
 
 	//getRemovableInfo();
 
