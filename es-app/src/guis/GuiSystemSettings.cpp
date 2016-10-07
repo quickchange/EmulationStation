@@ -10,6 +10,7 @@
 #include "guis/GuiSettings.h"
 #include "guis/GuiScraperStart.h"
 #include "guis/GuiDetectDevice.h"
+#include "guis/GuiWifi.h"
 #include "views/ViewController.h"
 
 #include <iostream>
