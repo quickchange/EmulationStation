@@ -46,7 +46,10 @@ void Settings::setDefaults()
 	mBoolMap["ShowExit"] = true;
 	mBoolMap["Windowed"] = false;
 	mBoolMap["UseOSK"] = true;
+<<<<<<< HEAD
 	mBoolMap["SplashScreen"] = true;
+=======
+>>>>>>> 7e697da... Add OSK (#14)
 
 #ifdef _RPI_
 	// don't enable VSync by default on the Pi, since it already

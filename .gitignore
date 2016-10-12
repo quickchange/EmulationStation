@@ -37,5 +37,8 @@ CPackSourceConfig.cmake
 .project
 .settings/
 data/resources/gridtile.png
+<<<<<<< HEAD
 
 external/
+=======
+>>>>>>> 7e697da... Add OSK (#14)
