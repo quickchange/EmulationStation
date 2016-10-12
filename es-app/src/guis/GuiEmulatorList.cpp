@@ -1,7 +1,6 @@
 
 #include "EmulationStation.h"
 #include "guis/GuiEmulatorList.h"
-#include "guis/GuiKeyboard.h"
 #include "guis/GuiSettings.h"
 #include "Window.h"
 #include "Sound.h"
@@ -23,9 +22,7 @@
 #include "components/SliderComponent.h"
 #include "components/TextComponent.h"
 #include "components/OptionListComponent.h"
-#include "components/ProgressBarComponent.h"
 #include "components/MenuComponent.h"
-#include "guis/GuiTextEditPopupKeyboard.h"
 
 namespace fs = boost::filesystem;
 

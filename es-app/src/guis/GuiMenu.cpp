@@ -360,6 +360,11 @@ GuiMenu::GuiMenu(Window* window) : GuiComponent(window), mMenu(window, "MAIN MEN
 			mWindow->pushGui(new GuiSystemSettings(mWindow));
 	});
 
+	addEntry("SYSTEM SETTINGS", 0x777777FF, true,
+		[this] {
+			mWindow->pushGui(new GuiSystemSettings(mWindow));
+	});
+
 	addEntry("QUIT", 0x777777FF, true, 
 		[this] {
 			auto s = new GuiSettings(mWindow, "QUIT");
