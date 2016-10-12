@@ -43,6 +43,7 @@ set(CORE_HEADERS
 	${CMAKE_CURRENT_SOURCE_DIR}/src/components/SwitchComponent.h
 	${CMAKE_CURRENT_SOURCE_DIR}/src/components/TextComponent.h
 	${CMAKE_CURRENT_SOURCE_DIR}/src/components/TextEditComponent.h
+	${CMAKE_CURRENT_SOURCE_DIR}/src/components/ProgressBarComponent.h
 	${CMAKE_CURRENT_SOURCE_DIR}/src/components/VideoComponent.h
 	${CMAKE_CURRENT_SOURCE_DIR}/src/components/VideoPlayerComponent.h
 	${CMAKE_CURRENT_SOURCE_DIR}/src/components/VideoVlcComponent.h
@@ -57,6 +58,7 @@ set(CORE_HEADERS
 	# Resources
 	${CMAKE_CURRENT_SOURCE_DIR}/src/resources/Font.h
 	${CMAKE_CURRENT_SOURCE_DIR}/src/resources/ResourceManager.h
+	${CMAKE_CURRENT_SOURCE_DIR}/src/resources/SVGResource.h
 	${CMAKE_CURRENT_SOURCE_DIR}/src/resources/TextureResource.h
 	${CMAKE_CURRENT_SOURCE_DIR}/src/resources/TextureData.h
 	${CMAKE_CURRENT_SOURCE_DIR}/src/resources/TextureDataManager.h
@@ -103,6 +105,7 @@ set(CORE_SOURCES
 	${CMAKE_CURRENT_SOURCE_DIR}/src/components/SwitchComponent.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/src/components/TextComponent.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/src/components/TextEditComponent.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/src/components/ProgressBarComponent.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/src/components/VideoComponent.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/src/components/VideoPlayerComponent.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/src/components/VideoVlcComponent.cpp
@@ -117,6 +120,7 @@ set(CORE_SOURCES
 	# Resources
 	${CMAKE_CURRENT_SOURCE_DIR}/src/resources/Font.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/src/resources/ResourceManager.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/src/resources/SVGResource.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/src/resources/TextureResource.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/src/resources/TextureData.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/src/resources/TextureDataManager.cpp

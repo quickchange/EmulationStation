@@ -1,5 +1,6 @@
 #include "EmulationStation.h"
 #include "guis/GuiMenu.h"
+#include "guis/GuiSystemSettings.h"
 #include "Window.h"
 #include "Sound.h"
 #include "Log.h"
@@ -354,7 +355,12 @@ GuiMenu::GuiMenu(Window* window) : GuiComponent(window), mMenu(window, "MAIN MEN
 			);
 	});
 
-	addEntry("QUIT", 0x777777FF, true,
+	addEntry("SYSTEM SETTINGS", 0x777777FF, true,
+		[this] {
+			mWindow->pushGui(new GuiSystemSettings(mWindow));
+	});
+
+	addEntry("QUIT", 0x777777FF, true, 
 		[this] {
 			auto s = new GuiSettings(mWindow, "QUIT");
 
