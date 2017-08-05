@@ -29,9 +29,13 @@ CMakeCache.txt
 CMakeFiles
 cmake_install.cmake
 Makefile
+CPackConfig.cmake
+CPackSourceConfig.cmake
 
 # Eclipse
 .cproject
 .project
 .settings/
 data/resources/gridtile.png
+
+external/
