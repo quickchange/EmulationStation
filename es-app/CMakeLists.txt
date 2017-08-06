@@ -33,6 +33,9 @@ set(ES_HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/src/guis/GuiGamelistFilter.h
     ${CMAKE_CURRENT_SOURCE_DIR}/src/guis/GuiCollectionSystemsOptions.h
     ${CMAKE_CURRENT_SOURCE_DIR}/src/guis/GuiInfoPopup.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/guis/GuiSystemSettings.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/guis/GuiStorageInfo.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/guis/GuiEmulatorList.h
 
     # Scrapers
     ${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/Scraper.h
@@ -86,6 +89,9 @@ set(ES_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/guis/GuiGamelistFilter.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/guis/GuiCollectionSystemsOptions.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/guis/GuiInfoPopup.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/guis/GuiSystemSettings.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/guis/GuiStorageInfo.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/guis/GuiEmulatorList.cpp
 
     # Scrapers
     ${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/Scraper.cpp
