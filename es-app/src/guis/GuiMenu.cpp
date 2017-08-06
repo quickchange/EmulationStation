@@ -173,12 +173,7 @@ GuiMenu::GuiMenu(Window* window) : GuiComponent(window), mMenu(window, "MAIN MEN
 			row.addElement(makeArrow(mWindow), false);
 			row.makeAcceptInputHandler(std::bind(&GuiMenu::openScreensaverOptions, this));
 			s->addRow(row);
-			// show help
-			auto show_help = std::make_shared<SwitchComponent>(mWindow);
-			show_help->setState(Settings::getInstance()->getBool("ShowHelpPrompts"));
-			s->addWithLabel("ON-SCREEN HELP", show_help);
-			s->addSaveFunc([show_help] { Settings::getInstance()->setBool("ShowHelpPrompts", show_help->getState()); });
-
+			
 			// quick system select (left/right in game list view)
 			auto quick_sys_select = std::make_shared<SwitchComponent>(mWindow);
 			quick_sys_select->setState(Settings::getInstance()->getBool("QuickSystemSelect"));
